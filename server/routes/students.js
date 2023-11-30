@@ -18,8 +18,21 @@ export const studentsRouter = express.Router();
 //     res.send(getCourse(req.params.id));
 // });
 
+//https://swagger-autogen.github.io/docs/openapi-3/schemas-and-components
 studentsRouter.get('/:id', (req, res) => {
     client.getStudent({studentId: "1"}, (err, response) => {
+                // #swagger.tags = ['Studnet']
+            /* #swagger.responses[200] = {
+            description: "Some description...",
+            content: {
+                "application/json": {
+                    schema:{
+                        $ref: "#/components/schemas/Student"
+                    }
+                }           
+            }
+        }   
+    */
         if (err != null) {
             console.error(err);
         }

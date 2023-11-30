@@ -1,0 +1,167 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "TAPI-FRONT",
+      "description": "TAPI-FRONT"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000/"
+      }
+    ],
+    "paths": {
+      "hello/{id}": {
+        "get": {
+          "tags": [
+            "Hello"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/students/{id}": {
+        "get": {
+          "tags": [
+            "Studnet"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Some description...",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Student"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/lecturers/{id}": {
+        "get": {
+          "tags": [
+            "Lecturers"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/groups/{id}": {
+        "get": {
+          "tags": [
+            "Group"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/rooms/{id}": {
+        "get": {
+          "tags": [
+            "Room"
+          ],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Student": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "example": 1
+                },
+                "name": {
+                  "type": "string",
+                  "example": "John"
+                },
+                "surname": {
+                  "type": "string",
+                  "example": "Doe"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "john.doe@gmail.com"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

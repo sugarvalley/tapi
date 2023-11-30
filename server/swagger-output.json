@@ -1,0 +1,55 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "TAPI-FRONT",
+      "description": "TAPI-FRONT"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000/"
+      }
+    ],
+    "paths": {
+      "hello/{id}": {
+        "get": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/students/{id}": {
+        "get": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      }
+    }
+  }
